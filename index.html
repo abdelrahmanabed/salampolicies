@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salam Safety - Privacy & Terms</title>
+    <title>Salam Safety - Privacy, Terms & Account Deletion</title>
     <style>
         * {
             margin: 0;
@@ -142,6 +142,54 @@
             margin: 15px 0;
         }
 
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e40af;
+        }
+
+        .success-message {
+            color: #15803d;
+            background-color: #f0fff4;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 15px;
+            display: none;
+        }
+
         .footer {
             text-align: center;
             padding: 20px 0;
@@ -194,6 +242,7 @@
         <div class="tabs">
             <div class="tab active" data-tab="privacy" id="privacy-tab">Privacy Policy</div>
             <div class="tab" data-tab="terms" id="terms-tab">Terms of Use</div>
+            <div class="tab" data-tab="delete" id="delete-tab">Delete Account</div>
         </div>
         <div class="content ltr" id="content">
             <!-- Content will be injected by JavaScript -->
@@ -208,7 +257,7 @@
             privacy: {
                 en: `
                 <h2>Privacy Policy</h2>
-                <p><strong>Last Updated:</strong> May 13, 2025</p>
+                <p><strong>Last Updated:</strong> May 14, 2025</p>
                 
                 <p>At Salam Safety ("we," "us," or "our"), we are committed to protecting your privacy while enhancing workplace safety. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our safety assurance mobile application (the "App").</p>
                 
@@ -268,13 +317,24 @@
                 <ul>
                     <li><strong>Access:</strong> You can request access to the personal data we hold about you.</li>
                     <li><strong>Correction:</strong> You can request correction of inaccurate information through the project administration.</li>
-                    <li><strong>Deletion:</strong> You can request deletion of your data when your engagement with the project ends, subject to legal retention requirements.</li>
+                    <li><strong>Deletion:</strong> You can request deletion of your data when your engagement with the project ends, subject to legal retention requirements. To request account deletion, please visit our <a href="#" data-tab="delete">Account Deletion</a> page for detailed steps.</li>
                     <li><strong>Data Portability:</strong> You can request transfer of your data in a structured, commonly used format.</li>
                     <li><strong>Consent Withdrawal:</strong> You can withdraw consent for specific data processing activities, though this may limit your ability to use certain App features.</li>
                 </ul>
                 <p>To exercise these rights, please contact the project administration or email us at: <a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></p>
                 
-                <h3>6. Permission Requirements</h3>
+                <h3>6. Account Deletion Process</h3>
+                <p>You may request to delete your Salam Safety account and associated data by following these steps:</p>
+                <ul>
+                    <li>Navigate to the <a href="#" data-tab="delete">Account Deletion</a> page.</li>
+                    <li>Complete the form with your full name, email address, WhatsApp number, and any additional details.</li>
+                    <li>Submit the request. You will receive a confirmation email within 48 hours, and your request will be processed within 30 days.</li>
+                </ul>
+                <p><strong>Data Deleted:</strong> Upon approval, we will delete your identity information (name, email, WhatsApp number, profile photo, government-issued ID), biometric-related data (facial photographs), location data, and usage data.</p>
+                <p><strong>Data Retained:</strong> We may retain certain data as required by law (e.g., project attendance records for audit purposes) for up to 7 years, as mandated by applicable regulations.</p>
+                <p><strong>Retention Period:</strong> Non-deleted data will be securely stored and only accessible for legal compliance. After the retention period, all remaining data will be permanently deleted.</p>
+                
+                <h3>7. Permission Requirements</h3>
                 <p>The App requires the following permissions to function properly:</p>
                 <ul>
                     <li><strong>Camera:</strong> Required for taking profile photos, ID verification photos, and attendance verification.</li>
@@ -284,16 +344,16 @@
                 </ul>
                 <p>You can manage these permissions through your device settings, but limiting certain permissions may impact the functionality of the App.</p>
                 
-                <h3>7. Changes to This Policy</h3>
+                <h3>8. Changes to This Policy</h3>
                 <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes through the App, email, or other communication methods. Your continued use of the App after such modifications constitutes acceptance of the updated Privacy Policy.</p>
                 
-                <h3>8. Contact Us</h3>
+                <h3>9. Contact Us</h3>
                 <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
                 <p><a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></p>
                 `,
                 ar: `
                 <h2>سياسة الخصوصية</h2>
-                <p><strong>آخر تحديث:</strong> ١٣ مايو ٢٠٢٥</p>
+                <p><strong>آخر تحديث:</strong> ١٤ مايو ٢٠٢٥</p>
                 
                 <p>في سلام للسلامة ("نحن" أو "لنا" أو "الخاص بنا")، نحن ملتزمون بحماية خصوصيتك مع تعزيز السلامة في مكان العمل. توضح سياسة الخصوصية هذه كيفية جمع واستخدام والكشف عن معلوماتك وحمايتها عند استخدامك لتطبيق ضمان السلامة الخاص بنا ("التطبيق").</p>
                 
@@ -306,7 +366,7 @@
                 <ul>
                     <li><strong>معلومات الهوية:</strong> الاسم الكامل وعنوان البريد الإلكتروني ورقم هاتف واتساب والصورة الشخصية وبطاقة الهوية الحكومية (جواز السفر أو بطاقة الهوية الوطنية) أثناء التسجيل لأغراض التحقق.</li>
                     <li><strong>البيانات المتعلقة بالقياسات الحيوية:</strong> الصور الشخصية فقط لغرض التحقق من الهوية وتأكيد الحضور.</li>
-                    <li><strong>بيانات الموقع:</strong> بيانات الموقع الدقيقة من نظام تحديد المواقع العالمي (GPS) عند تسجيل الحضور للتحقق من وجود shareholder في مناطق العمل المحددة.</li>
+                    <li><strong>بيانات الموقع:</strong> بيانات الموقع الدقيقة من نظام تحديد المواقع العالمي (GPS) عند تسجيل الحضور للتحقق من وجودك في مناطق العمل المحددة.</li>
                     <li><strong>الوصول إلى الوسائط:</strong> الوصول إلى كاميرا جهازك ومعرض الصور لتحميل الصور الشخصية ووثائق الهوية وصور التحقق من الحضور.</li>
                     <li><strong>الوصول إلى الملفات:</strong> الوصول إلى ملفات جهازك لتحميل الوثائق المتعلقة بالمشروع ومواد السلامة.</li>
                     <li><strong>معلومات الجهاز:</strong> معلومات حول جهازك المحمول بما في ذلك نوع الجهاز ونظام التشغيل ومعرّفات الجهاز الفريدة وعنوان IP ومعلومات شبكة الجوال.</li>
@@ -319,7 +379,7 @@
                     <li><strong>التحقق من الهوية:</strong> للتحقق من هويتك من خلال وثائق الهوية الرسمية والتعرف على الوجه لأغراض أمنية ولضمان وصول الموظفين المصرح لهم فقط إلى المناطق المقيدة.</li>
                     <li><strong>مراقبة الحضور:</strong> لتتبع الحضور من خلال مقارنة صورتك الشخصية بصورة ملفك الشخصي وتسجيل موقعك عند تسجيل الحضور.</li>
                     <li><strong>الامتثال للسلامة:</strong> لضمان امتثال جميع الموظفين لبروتوكولات السلامة ووجودهم في مناطق العمل الآمنة المحددة.</li>
-                    <li><strong>إدارة المشروع:</strong> للسماح للمسanquأولين بالتحقق من المشاركين في المشروع وإدارة توزيع القوى العاملة.</li>
+                    <li><strong>إدارة المشروع:</strong> للسماح للمسؤولين بالتحقق من المشاركين في المشروع وإدارة توزيع القوى العاملة.</li>
                     <li><strong>التواصل:</strong> لإرسال تنبيهات السلامة المهمة ورموز التحقق وتحديثات المشروع عبر واتساب أو البريد الإلكتروني.</li>
                     <li><strong>تحسين الخدمة:</strong> لتحليل أنماط الاستخدام لتحسين وظائف التطبيق وميزات السلامة وتجربة المستخدم.</li>
                     <li><strong>الدعم الفني:</strong> لتشخيص المشكلات الفنية وتقديم دعم العملاء.</li>
@@ -345,7 +405,7 @@
                 <p>نحتفظ ببياناتك طالما أن حسابك نشط أو حسب الحاجة لتقديم الخدمات. يتم الاحتفاظ ببيانات التحقق من الهوية طوال مدة مشاركتك في المشروع بالإضافة إلى أي فترة إضافية تتطلبها القوانين المعمول بها.</p>
                 
                 <div class="highlight">
-                    <p>في حين نقوم بتنفيذ إجراءات أمنية معقولة، لا توجد طريقة نقل أو تخزين آمنة بنسبة 100٪. أنت مسؤول عن الحفاظ على أمان بيانات اعتماد حسابك.</p>
+                    <p>في حين نقوم بتنفيذ إجراءات أمنية معقولة، لا توجد طريقة نقل أو تخزين آمنة بنسبة ١٠٠٪. أنت مسؤول عن الحفاظ على أمان بيانات اعتماد حسابك.</p>
                 </div>
                 
                 <h3>٥. حقوقك والتحكم</h3>
@@ -353,13 +413,24 @@
                 <ul>
                     <li><strong>الوصول:</strong> يمكنك طلب الوصول إلى البيانات الشخصية التي نحتفظ بها عنك.</li>
                     <li><strong>التصحيح:</strong> يمكنك طلب تصحيح المعلومات غير الدقيقة من خلال إدارة المشروع.</li>
-                    <li><strong>الحذف:</strong> يمكنك طلب حذف بياناتك عند انتهاء مشاركتك في المشروع، مع مراعاة متطلبات الاحتفاظ القانونية.</li>
+                    <li><strong>الحذف:</strong> يمكنك طلب حذف بياناتك عند انتهاء مشاركتك في المشروع، مع مراعاة متطلبات الاحتفاظ القانونية. لطلب حذف الحساب، يرجى زيارة صفحة <a href="#" data-tab="delete">حذف الحساب</a> للحصول على الخطوات التفصيلية.</li>
                     <li><strong>نقل البيانات:</strong> يمكنك طلب نقل بياناتك بتنسيق منظم وشائع الاستخدام.</li>
                     <li><strong>سحب الموافقة:</strong> يمكنك سحب الموافقة على أنشطة معالجة البيانات المحددة، على الرغم من أن هذا قد يحد من قدرتك على استخدام ميزات معينة في التطبيق.</li>
                 </ul>
                 <p>لممارسة هذه الحقوق، يرجى الاتصال بإدارة المشروع أو مراسلتنا عبر البريد الإلكتروني على: <a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></p>
                 
-                <h3>٦. متطلبات الأذونات</h3>
+                <h3>٦. عملية حذف الحساب</h3>
+                <p>يمكنك طلب حذف حسابك في سلام للسلامة والبيانات المرتبطة به باتباع الخطوات التالية:</p>
+                <ul>
+                    <li>انتقل إلى صفحة <a href="#" data-tab="delete">حذف الحساب</a>.</li>
+                    <li>أكمل النموذج باسمك الكامل وعنوان بريدك الإلكتروني ورقم واتساب وأي تفاصيل إضافية.</li>
+                    <li>قدم الطلب. ستتلقى بريدًا إلكترونيًا للتأكيد خلال ٤٨ ساعة، وسيتم معالجة طلبك خلال ٣٠ يومًا.</li>
+                </ul>
+                <p><strong>البيانات المحذوفة:</strong> عند الموافقة، سنقوم بحذف معلومات هويتك (الاسم، البريد الإلكتروني، رقم واتساب، الصورة الشخصية، وثيقة الهوية الحكومية)، والبيانات المتعلقة بالقياسات الحيوية (الصور الشخصية)، وبيانات الموقع، وبيانات الاستخدام.</p>
+                <p><strong>البيانات المحتفظ بها:</strong> قد نحتفظ ببعض البيانات حسب ما يقتضيه القانون (مثل سجلات حضور المشروع لأغراض التدقيق) لمدة تصل إلى ٧ سنوات، كما هو مطلوب بموجب اللوائح المعمول بها.</p>
+                <p><strong>فترة الاحتفاظ:</strong> سيتم تخزين البيانات غير المحذوفة بشكل آمن وستكون متاحة فقط للامتثال القانوني. بعد انتهاء فترة الاحتفاظ، سيتم حذف جميع البيانات المتبقية نهائيًا.</p>
+                
+                <h3>٧. متطلبات الأذونات</h3>
                 <p>يتطلب التطبيق الأذونات التالية للعمل بشكل صحيح:</p>
                 <ul>
                     <li><strong>الكاميرا:</strong> مطلوبة لالتقاط الصور الشخصية وصور التحقق من الهوية والتحقق من الحضور.</li>
@@ -369,10 +440,10 @@
                 </ul>
                 <p>يمكنك إدارة هذه الأذونات من خلال إعدادات جهازك، ولكن تقييد بعض الأذونات قد يؤثر على وظائف التطبيق.</p>
                 
-                <h3>٧. التغييرات في هذه السياسة</h3>
+                <h3>٨. التغييرات في هذه السياسة</h3>
                 <p>قد نقوم بتحديث سياسة الخصوصية هذه بشكل دوري لتعكس التغييرات في ممارساتنا أو المتطلبات القانونية. سنخطرك بالتغييرات المهمة من خلال التطبيق أو البريد الإلكتروني أو وسائل اتصال أخرى. يشكل استمرار استخدامك للتطبيق بعد هذه التعديلات قبولًا لسياسة الخصوصية المحدثة.</p>
                 
-                <h3>٨. اتصل بنا</h3>
+                <h3>٩. اتصل بنا</h3>
                 <p>إذا كان لديك أي أسئلة أو مخاوف بشأن سياسة الخصوصية هذه أو ممارسات البيانات لدينا، يرجى الاتصال بنا على:</p>
                 <p><a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></p>
                 `
@@ -380,7 +451,7 @@
             terms: {
                 en: `
                 <h2>Terms of Use</h2>
-                <p><strong>Last Updated:</strong> May 13, 2025</p>
+                <p><strong>Last Updated:</strong> May 14, 2025</p>
                 
                 <p>Welcome to Salam Safety ("we," "us," or "our"). These Terms of Use ("Terms") govern your access to and use of our workplace safety mobile application (the "App"). Please read these Terms carefully before using the App.</p>
                 
@@ -506,7 +577,7 @@
                 <p><strong>6.2 Termination by You:</strong> You may terminate your account:</p>
                 <ul>
                     <li>By contacting the project administrators</li>
-                    <li>By sending a written request to <a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></li>
+                    <li>By submitting a deletion request via our <a href="#" data-tab="delete">Account Deletion</a> page</li>
                 </ul>
                 
                 <p><strong>6.3 Effect of Termination:</strong> Upon termination:</p>
@@ -554,7 +625,7 @@
                 `,
                 ar: `
                 <h2>شروط الاستخدام</h2>
-                <p><strong>آخر تحديث:</strong> ١٣ مايو ٢٠٢٥</p>
+                <p><strong>آخر تحديث:</strong> ١٤ مايو ٢٠٢٥</p>
                 
                 <p>مرحبًا بك في سلام للسلامة ("نحن" أو "لنا" أو "الخاص بنا"). تحكم شروط الاستخدام هذه ("الشروط") وصولك إلى تطبيقنا المحمول للسلامة في مكان العمل ("التطبيق") واستخدامه. يرجى قراءة هذه الشروط بعناية قبل استخدام التطبيق.</p>
                 
@@ -680,7 +751,7 @@
                 <p><strong>٦.٢ الإنهاء من قبلك:</strong> يمكنك إنهاء حسابك:</p>
                 <ul>
                     <li>من خلال التواصل مع مديري المشروع</li>
-                    <li>بإرسال طلب كتابي إلى <a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></li>
+                    <li>بإرسال طلب حذف عبر صفحة <a href="#" data-tab="delete">حذف الحساب</a></li>
                 </ul>
                 
                 <p><strong>٦.٣ آثار الإنهاء:</strong> عند الإنهاء:</p>
@@ -726,6 +797,88 @@
                 <p>إذا كان لديك أي أسئلة حول هذه الشروط، يرجى الاتصال بنا على:</p>
                 <p><a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a></p>
                 `
+            },
+            delete: {
+                en: `
+                <h2>Delete Your Salam Safety Account</h2>
+                <p>If you wish to delete your Salam Safety account and associated data, please complete the form below. We will process your request within 30 days and send a confirmation email within 48 hours.</p>
+                
+                <h3>Steps to Request Account Deletion</h3>
+                <ul>
+                    <li>Provide your full name, email address, and WhatsApp number as registered in the App.</li>
+                    <li>Include any additional details or reasons for your request (optional).</li>
+                    <li>Submit the form. You will receive a confirmation email, and your data will be deleted subject to legal retention requirements.</li>
+                </ul>
+                
+                <h3>Data Deletion Details</h3>
+                <p><strong>Data Deleted:</strong> We will delete your identity information (name, email, WhatsApp number, profile photo, government-issued ID), biometric-related data (facial photographs), location data, and usage data.</p>
+                <p><strong>Data Retained:</strong> Certain data, such as project attendance records, may be retained for up to 7 years as required by law for audit purposes.</p>
+                <p><strong>Retention Period:</strong> Retained data will be securely stored and only accessible for legal compliance. After the retention period, all remaining data will be permanently deleted.</p>
+                
+                <div class="highlight">
+                    <p>Please ensure the information provided matches your account details to avoid delays in processing your request.</p>
+                </div>
+                
+                <h3>Deletion Request Form</h3>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input type="tel" id="whatsapp" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes"></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitDeletionRequest()">Submit Request</button>
+                <div class="success-message" id="successMessage">Your deletion request has been submitted successfully. You will receive a confirmation email within 48 hours.</div>
+                `,
+                ar: `
+                <h2>حذف حساب سلام للسلامة</h2>
+                <p>إذا كنت ترغب في حذف حسابك في سلام للسلامة والبيانات المرتبطة به، يرجى ملء النموذج أدناه. سنقوم بمعالجة طلبك خلال ٣٠ يومًا وإرسال بريد إلكتروني للتأكيد خلال ٤٨ ساعة.</p>
+                
+                <h3>خطوات طلب حذف الحساب</h3>
+                <ul>
+                    <li>قدم اسمك الكامل وعنوان بريدك الإلكتروني ورقم واتساب كما هو مسجل في التطبيق.</li>
+                    <li>قم بتضمين أي تفاصيل إضافية أو أسباب لطلبك (اختياري).</li>
+                    <li>قدم النموذج. ستتلقى بريدًا إلكترونيًا للتأكيد، وسيتم حذف بياناتك مع مراعاة متطلبات الاحتفاظ القانونية.</li>
+                </ul>
+                
+                <h3>تفاصيل حذف البيانات</h3>
+                <p><strong>البيانات المحذوفة:</strong> سنقوم بحذف معلومات هويتك (الاسم، البريد الإلكتروني، رقم واتساب، الصورة الشخصية، وثيقة الهوية الحكومية)، والبيانات المتعلقة بالقياسات الحيوية (الصور الشخصية)، وبيانات الموقع، وبيانات الاستخدام.</p>
+                <p><strong>البيانات المحتفظ بها:</strong> قد يتم الاحتفاظ ببيانات معينة، مثل سجلات حضور المشروع، لمدة تصل إلى ٧ سنوات كما هو مطلوب بموجب القانون لأغراض التدقيق.</p>
+                <p><strong>فترة الاحتفاظ:</strong> سيتم تخزين البيانات المحتفظ بها بشكل آمن وستكون متاحة فقط للامتثال القانوني. بعد انتهاء فترة الاحتفاظ، سيتم حذف جميع البيانات المتبقية نهائيًا.</p>
+                
+                <div class="highlight">
+                    <p>يرجى التأكد من أن المعلومات المقدمة تتطابق مع تفاصيل حسابك لتجنب التأخير في معالجة طلبك.</p>
+                </div>
+                
+                <h3>نموذج طلب الحذف</h3>
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">عنوان البريد الإلكتروني</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">رقم واتساب</label>
+                    <input type="tel" id="whatsapp" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">ملاحظات إضافية (اختياري)</label>
+                    <textarea id="notes"></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitDeletionRequest()">تقديم الطلب</button>
+                <div class="success-message" id="successMessage">تم تقديم طلب الحذف بنجاح. ستتلقى بريدًا إلكترونيًا للتأكيد خلال ٤٨ ساعة.</div>
+                `
             }
         };
 
@@ -736,6 +889,7 @@
         const footer = document.getElementById('footer');
         const privacyTab = document.getElementById('privacy-tab');
         const termsTab = document.getElementById('terms-tab');
+        const deleteTab = document.getElementById('delete-tab');
 
         let currentLang = 'en';
 
@@ -761,6 +915,17 @@
                 '© 2025 Salam Safety. All rights reserved. | Contact: <a href="mailto:abedssystems@gmail.com">abedssystems@gmail.com</a>';
             privacyTab.textContent = lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy';
             termsTab.textContent = lang === 'ar' ? 'شروط الاستخدام' : 'Terms of Use';
+            deleteTab.textContent = lang === 'ar' ? 'حذف الحساب' : 'Delete Account';
+
+            // Add event listeners to links that switch tabs
+            const tabLinks = contentDiv.querySelectorAll('a[data-tab]');
+            tabLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetTab = link.getAttribute('data-tab');
+                    updateContent(targetTab, currentLang);
+                });
+            });
         }
 
         tabs.forEach(tab => {
@@ -777,6 +942,36 @@
                 updateContent(activeTab, currentLang);
             });
         });
+
+        function submitDeletionRequest() {
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const notes = document.getElementById('notes').value;
+
+            if (!fullName || !email || !whatsapp) {
+                alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 'Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate sending email notification (actual email sending requires backend)
+            console.log('Sending deletion request email to abedssystems@gmail.com:', {
+                fullName,
+                email,
+                whatsapp,
+                notes
+            });
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Reset form
+            document.getElementById('fullName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('whatsapp').value = '';
+            document.getElementById('notes').value = '';
+        }
 
         // Show Privacy Policy in English by default
         updateContent('privacy', 'en');
